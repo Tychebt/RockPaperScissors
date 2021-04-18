@@ -1,16 +1,19 @@
 function add7 (number){
-return number+7;
+console.log( number+7)
 }
 
 function multiply (x,y){
-    return x*y;
+    console.log( x*y )
 }
 
 function capitalize (str){
-    return str.indexOf(0).toUpperCase();
+    let cap = str.slice(0, 1).toUpperCase()
+    let norm = str.slice(1)
+    let res = cap + norm
+    console.log( res  )
 }
 
 function lastLetter (str){
     let length = str.length;
-    return str.indexOf(length-1)
+    console.log(str.slice(length-1))
 }
