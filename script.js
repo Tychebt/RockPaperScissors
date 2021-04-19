@@ -1,4 +1,4 @@
-function add7 (number){
+/*function add7 (number){
 console.log( number+7)
 }
 
@@ -16,4 +16,17 @@ function capitalize (str){
 function lastLetter (str){
     let length = str.length;
     console.log(str.slice(length-1))
+} */
+
+function computerPlay (){
+    let res = getRandomInt(3)
+    if(res === 0){
+        return "Rock"
+    }
+    else if(res === 1){
+        return "Paper"
+    }
+    else if(res === 2){
+        return "Scissors"
+    }
 }
