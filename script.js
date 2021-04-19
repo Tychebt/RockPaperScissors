@@ -1,22 +1,9 @@
-/*function add7 (number){
-console.log( number+7)
-}
-
-function multiply (x,y){
-    console.log( x*y )
-}*/
-
 function capitalize (str){
     let cap = str.slice(0, 1).toUpperCase()
     let norm = str.slice(1)
     let res = cap + norm
     return res
 }
-
-function lastLetter (str){
-    let length = str.length;
-    console.log(str.slice(length-1))
-} 
 
 function computerSelection(){
     let res = Math.floor(Math.random() * 3)
@@ -63,10 +50,15 @@ function playRound(computerSelection, playerSelection){
 function game(){
     let countPC = 0
     let countPlayer = 0
+    let res
 
     for(let i = 0; i<5; i++){
-        playRound(computerSelection, playerSelection).indexOf == -1
-
-        
+        res = playRound(computerSelection, playerSelection)
+        console.log(res)
+        if(res.indexOf('Win')>=1){countPlayer++}
+        else if(res.indexOf('Lose')>=4){countPC++}
     }
+    if(countPlayer>countPC){return 'You won the game !'}
+    else if(countPC>countPlayer){return 'You lost the game !'}
+    else {return 'This is a tie !'}
 }
