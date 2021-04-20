@@ -52,9 +52,8 @@ function game(){
         if(res.indexOf('Win')>=1){countPlayer++}
         else if(res.indexOf('Lose')>=4){countPC++}
     }
-    if(countPlayer>countPC){alert('You won the game !')}
-    else if(countPC>countPlayer){alert('You lost the game !')}
-    else {alert('This is a tie !')}
+    if(countPlayer>countPC){return 'You won the game !'}
+    else if(countPC>countPlayer){return 'You lost the game !'}
+    else {return 'This is a tie !'}
 }
 
-game()
