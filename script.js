@@ -6,22 +6,16 @@ function capitalize (str){
 }
 
 function computerSelection(){
-    let res = Math.floor(Math.random() * 3)
-    if(res === 0){
-        return "Rock"
-    }
-    else if(res === 1){
-        return "Paper"
-    }
-    else if(res === 2){
-        return "Scissors"
-    }
+    let result = ['Rock', 'Paper', 'Scissors'][Math.floor(Math.random() * 3)];
+    return result
 }
 
 
 function playerSelection(){
-    let res = prompt('Rock, Paper or Scissors ?', 'Rock')
-    res = capitalize(res)
+    let res
+    while(res != 'Rock' && res != 'Paper' && res != 'Scissors'){
+        res = capitalize(prompt('Rock, Paper or Scissors ?', 'Rock'))
+    }
     return res
 }
 
