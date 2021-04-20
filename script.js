@@ -56,3 +56,5 @@ function game(){
     else if(countPC>countPlayer){return 'You lost the game !'}
     else {return 'This is a tie !'}
 }
+
+game()
